@@ -21,9 +21,7 @@ client = commands.Bot(command_prefix="?")
 @client.event
 async def on_ready():
     print("\033c")
-    print(
-        "Bot has Successfully been brought to Life"
-    )  # will print "bot online" in the console when the bot is online
+    print("Bot has Successfully been brought to Life")  # will print "bot online" in the console when the bot is online
 
 
 def Addscore(user, change):
@@ -94,4 +92,7 @@ async def contributers(ctx):
 
 
 if __name__ == "__main__":
-    client.run("OTMzNTQwMjU2MDY0NjIyNjIy.YejBHQ.CyvC-IuOO8Kxb87d9_vV2Hpg7VU")
+    try:
+        client.run("DISCORD BOT TOKEN")
+    except:
+        print("Error, Incorrect Discord bot Token?")
