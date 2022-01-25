@@ -52,10 +52,7 @@ async def askme(ctx):
         AnswerInfo = Tech_Questions[QuestionSelection]["Answer"]
 
     except:
-        await ctx.send(
-            "Error Pulling Question please try agian\n\nError Number: "
-            + str(QuestionSelection)
-        )
+        await ctx.send("Error Pulling Question please try agian\n\nError Number: "+ str(QuestionSelection))
 
     # Prints the question
     await ctx.send(QuestionInfo)
