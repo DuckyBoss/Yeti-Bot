@@ -1,2 +1,3 @@
 # Yeti-Bot
-DiscordBot
+
+Reminders: Remove Question Number before question.
