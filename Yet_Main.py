@@ -94,6 +94,6 @@ async def contributers(ctx):
 
 if __name__ == "__main__":
     try:
-        client.run("OTMzNTQwMjU2MDY0NjIyNjIy.YejBHQ.t6OzMtfnMe6VtTEpVE6rujJw2-Q")
+        client.run("BOT_TOKEN")
     except:
         print("Error, Incorrect Discord bot Token?")
