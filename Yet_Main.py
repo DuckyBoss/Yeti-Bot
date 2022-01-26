@@ -21,7 +21,7 @@ client = commands.Bot(command_prefix="?")
 @client.event
 async def on_ready():
     print("\033c")
-    channel = bot.get_channel(903416175726301235)
+    channel = client.get_channel(903416175726301235)
     await channel.send("<@600010784453558331> The Bot is Awake")
     print("THE BOT IS ALIVE!!!!!")  # will print "bot online" in the console when the bot is online
 
@@ -48,7 +48,7 @@ async def port(ctx):
 async def askme(ctx):
 
     QuestionSelection = random.randint(1, (len(Tech_Questions) - 1))
-    QuestionSelection = 94
+
     # If it cant get the qeustion info itll print error
     try:
 
@@ -59,7 +59,7 @@ async def askme(ctx):
         await ctx.send("Error Pulling Question please try agian\n\nError Number: "+ str(QuestionSelection))
 
     # Prints the question
-    await ctx.send(QuestionInfo)
+    await ctx.send(f"{QuestionSelection}.) {QuestionInfo}")
 
     # Waits for response
     msg = await client.wait_for("message", check=check)
@@ -94,6 +94,6 @@ async def contributers(ctx):
 
 if __name__ == "__main__":
     try:
-        client.run("BOT_TOKEN")
+        client.run("OTMzNTQwMjU2MDY0NjIyNjIy.YejBHQ.t6OzMtfnMe6VtTEpVE6rujJw2-Q")
     except:
         print("Error, Incorrect Discord bot Token?")
