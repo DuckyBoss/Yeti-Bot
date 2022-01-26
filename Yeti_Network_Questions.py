@@ -440,6 +440,8 @@ Tech_Questions = {
 }
 
 
+
+#Unfinished, not sure this is the best format to proceed 
 commonPorts = {
     0: {
         "PortNumber": 20,
