@@ -207,7 +207,7 @@ Tech_Questions = {
         "Answer": "C"
     },
     47: {
-        "Question": "Which characters represent wild cards?\n\nA. ^\nB. %\nC. @\nD. #\nE. *\n F. ?\nG. E & F",
+        "Question": "\\n\nA. ^\nB. %\nC. @\nD. #\nE. *\n F. ?\nG. E & F",
         "Answer": "G"
     },
     48: {
@@ -275,7 +275,7 @@ Tech_Questions = {
         "Answer": "B"
     },
     64: {
-        "Question": "Which program displays the programs that are currently running on the computer in RAM?\n\nA. Net List\nB. Services\nC. TasklistThis\nD. Clip",
+        "Question": "Which program displays the programs that are currently running on the computer in RAM?\n\nA. Net List\nB. Services\nC. Tasklist\nD. Clip",
         "Answer": "C"
     },
 
