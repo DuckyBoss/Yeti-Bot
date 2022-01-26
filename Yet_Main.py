@@ -21,17 +21,21 @@ client = commands.Bot(command_prefix="?")
 @client.event
 async def on_ready():
     print("\033c")
+    channel = bot.get_channel(903416175726301235)
+    await channel.send("<@600010784453558331> The Bot is Awake")
     print("THE BOT IS ALIVE!!!!!")  # will print "bot online" in the console when the bot is online
 
-
+    
+#Not finished and will likely be scrapped
+#Leaderboard, add username if question correct. Then count amount of times username was posted. (Going to be repaced with JSON)
 def Addscore(user, change):
 
     if change == False:
         with open("ScoreTracker.txt", "a") as file:
-            file.write("-" + str(user) + "\n")
+            file.write(f"- {user} \n")
     elif change == True:
         with open("ScoreTracker.txt", "a") as file:
-            file.write(str(user) + "\n")
+            file.write(f"{user} \n")
 
 
 @client.command()
@@ -64,10 +68,10 @@ async def askme(ctx):
     UserAnswer = str(UserAnswer).upper()
 
     if UserAnswer == AnswerInfo and msg.author == ctx.author:
-        await ctx.send(f"Correct!")
+        await ctx.send("Correct!")
 
     elif msg.author == ctx.author and UserAnswer != AnswerInfo:
-        await ctx.send(f"Incorrect, " + AnswerInfo + " was the correct answer")
+        await ctx.send(f"Incorrect, {AnswerInfo} was the correct answer")
 
     
 
@@ -77,7 +81,7 @@ async def ListAll(ctx):
     if str(ctx.author.id) == "600010784453558331":
         for x in range(len(Tech_Questions)):
             time.sleep(2)
-            await ctx.send("NUMBER " + str(x))
+            await ctx.send(f"NUMBER x")
             await ctx.send(Tech_Questions[x]["Question"])
             await ctx.send(Tech_Questions[x]["Answer"])
             await ctx.send(".\n\n.")
