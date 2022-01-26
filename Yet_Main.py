@@ -81,7 +81,7 @@ async def ListAll(ctx):
     if str(ctx.author.id) == "600010784453558331":
         for x in range(len(Tech_Questions)):
             time.sleep(2)
-            await ctx.send(f"NUMBER x")
+            await ctx.send(f"NUMBER {x}")
             await ctx.send(Tech_Questions[x]["Question"])
             await ctx.send(Tech_Questions[x]["Answer"])
             await ctx.send(".\n\n.")
