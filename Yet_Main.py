@@ -21,7 +21,7 @@ client = commands.Bot(command_prefix="?")
 @client.event
 async def on_ready():
     print("\033c")
-    print("Bot has Successfully been brought to Life")  # will print "bot online" in the console when the bot is online
+    print("THE BOT IS ALIVE!!!!!")  # will print "bot online" in the console when the bot is online
 
 
 def Addscore(user, change):
