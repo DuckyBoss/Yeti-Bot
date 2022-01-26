@@ -6,8 +6,9 @@ Tech_Questions = {
 
     #--------------------------------------Unit-1---------------------------------------#
     0: {
-        "Question": "Placeholder for listing questions (it starts a zero and im not changing all them num.",
-        "Answer": "tf"
+        "Question": "Placeholder",
+        "Answer": "n/a"
+        "Explanation":"n/a"
     },
     #Practice Review 1
     1: {
