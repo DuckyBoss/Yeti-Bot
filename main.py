@@ -96,7 +96,7 @@ async def ListAll(ctx):
             await ctx.send(Tech_Questions[x]["Answer"])
             await ctx.send(".\n\n.")
 
-@client.command
+@client.command()
 async def whoami(ctx):
     host_name = socket.gethostname()
     local_ip = socket.gethostbyname(hostname)
