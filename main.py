@@ -10,7 +10,7 @@ import random
 import time
 
 
-from Yeti_Network_Questions import *
+from Yeti_Qeustions import *
 
 
 client = discord.Client()
@@ -38,9 +38,11 @@ def Addscore(user, change):
             file.write(f"{user} \n")
 
 
-@client.command()
-async def port(ctx):
-    await ctx.send("What is Port " + random.choice(commonPorts) + "?")
+
+
+
+
+
 
 
 # Gives random Question from Yeti_Qeustions
@@ -62,21 +64,29 @@ async def askme(ctx):
     await ctx.send(f"{QuestionSelection}.) {QuestionInfo}")
 
     # Waits for response
-    msg = await client.wait_for("message", check=check)
+    while True:
+        msg = await client.wait_for("message", check=check)
 
-    UserAnswer = msg.content
-    UserAnswer = str(UserAnswer).upper()
+        UserAnswer = msg.content
+        UserAnswer = str(UserAnswer).upper()
 
-    if UserAnswer == AnswerInfo and msg.author == ctx.author:
-        await ctx.send("Correct!")
+        if UserAnswer == AnswerInfo and msg.author == ctx.author:
+            await ctx.send("Correct!")
+            break
+        
+        elif msg.author == ctx.author and UserAnswer != AnswerInfo and len(UserAnswer) > 5:
+            await ctx.send(f"Imma ignore that")
 
-    elif msg.author == ctx.author and UserAnswer != AnswerInfo:
-        await ctx.send(f"Incorrect, {AnswerInfo} was the correct answer")
+        elif msg.author == ctx.author and UserAnswer != AnswerInfo:
+            await ctx.send(f"Incorrect, {AnswerInfo} was the correct answer")
+            break
+        
+            
 
     
 
 
-@client.command()
+@client.command
 async def ListAll(ctx):
     if str(ctx.author.id) == "600010784453558331":
         for x in range(len(Tech_Questions)):
@@ -90,6 +100,44 @@ async def ListAll(ctx):
 @client.command()
 async def contributers(ctx):
     await ctx.send("Contributers:\n\nMartin V. Phillips")
+
+
+
+
+
+@client.event
+async def on_message(message):
+
+    if "Yeti" not in str(message.author):
+    
+        #checks for Port number and gives port name
+        for DictRange in range(len(commonPorts)):
+        
+            if str(commonPorts[DictRange]["PortNumber"]) in str(message.content).upper():
+
+                #Checks for "what" in sentance (Makes sure its a question)
+                if "WHAT" in str(message.content).upper():
+                    await message.channel.send(commonPorts[DictRange]["PortName"])
+
+
+        #checks for Port name and says port number          
+        for DictRange in range(len(commonPorts)):
+        
+            if str(commonPorts[DictRange]["PortName"]) in str(message.content).upper():
+
+                #Checks for "what" in sentance (Makes sure its a question)
+                if "WHAT" in str(message.content).upper():
+                    await message.channel.send(f"Port #{commonPorts[DictRange]['PortNumber']} ")
+
+
+
+    #makes ?commands work (dont know why, but leave it be)
+    await client.process_commands(message)
+
+
+
+
+
 
 
 if __name__ == "__main__":
