@@ -1,13 +1,6 @@
 # Yeti-Bot
 
-Reminders: Remove Question Number before question.
+Reminders: Remove Question Number before question. (?askme)
 
 
-=========================================
 
-Bot wont work with name change atm.
-
-async def on_message(message):
-  if "Yeti" not in str(message.author):
-  
-=========================================
