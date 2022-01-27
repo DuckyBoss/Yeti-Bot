@@ -86,7 +86,7 @@ async def askme(ctx):
     
 
 
-@client.command
+@client.command()
 async def ListAll(ctx):
     if str(ctx.author.id) == "600010784453558331":
         for x in range(len(Tech_Questions)):
