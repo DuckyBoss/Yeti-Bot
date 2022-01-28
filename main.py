@@ -10,7 +10,7 @@ import random
 import time
 
 
-from Yeti_Qeustions import *
+from Network_Questions import *
 
 
 client = discord.Client()
