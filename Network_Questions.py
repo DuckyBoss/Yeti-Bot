@@ -7,7 +7,7 @@ Tech_Questions = {
     #--------------------------------------Unit-1---------------------------------------#
     0: {
         "Question": "Placeholder",
-        "Answer": "n/a"
+        "Answer": "n/a",
         "Explanation":"n/a"
     },
     #Practice Review 1
@@ -431,6 +431,66 @@ Tech_Questions = {
     100: {
         "Question": "Which record type offers the ability to use a different name?\n\nA. Alias\nB. SOA\nC. CNAME\nD. MX",
         "Answer": "C"
+    },
+    101: {
+        "Question": "The ____ layer is the lowest, or first, layer of the OSI Model.\n\nA. Data Link\nB. Application\nC. Physical\nD. Transport",
+        "Answer": "C"
+    },
+    102: {
+        "Question": "Protocols in the ____ layer coordinate and maintain communications between two nodes on the network.\n\nA. Data Link\nB. Session\nC. Physical\nD. Transport",
+        "Answer": "B"
+    },
+    103: {
+        "Question": "Layer 3 is the __________ layer of the OSI model.\n\nA. Data Link\nB. Session\nC. Physical\nD. Network",
+        "Answer": "D"
+    },
+    104: {
+        "Question": "The top, or seventh, layer of the OSI Model is the ____ layer\n\nA. Application\nB. Session\nC. Physical\nD. Network",
+        "Answer": "A"
+    },
+    105: {
+        "Question": "Encryption of information, if done, is performed at this level of the OSI model:\n\nA. Application\nB. Session\nC. Physical\nD. Presentation",
+        "Answer": "D"
+    },
+    106: {
+        "Question": "This information on the segment ensures all the pieces have arrived.\n\nA. Checksum\nB. Padding\nC. CRC\nD. Sequencing number",
+        "Answer": "A"
+    },
+    107: {
+        "Question": "The MAC address is appended onto the data frame in this OSI model layer.\n\nA. Network\nB. Physical\nC. Data-link\nD. Transport",
+        "Answer": "C"
+    },
+    108: {
+        "Question": "Which layer of the OSI model is responsible for addressing and routing?\n\nA. Session\nB. Network\nC. Application\nD. Transport",
+        "Answer": "B"
+    },
+    109: {
+        "Question": "Files are converted to standard data formats at this level of the sending OSI process of the OSI model.\n\nA. Layer 2\nB. Presentation\nC. Transport\nD. Data-Link",
+        "Answer": "B"
+    },
+    110: {
+        "Question": "Used to remotely connect to a switch and no encryption is used.  What port number is the destination port?\n\nA. 69\nB. 23\nC. 25\nD. 67",
+        "Answer": "B"
+    },
+    111: {
+        "Question": "This ensures that the frame was not damaged in transit.\n\nA. The Checksum\nB. The Segment\nC. The CRC\nD. The MTU",
+        "Answer": "C"
+    },
+    112: {
+        "Question": "A packet is being sent to port 3389.  What type of service is being used?\n\nA. LDAP\nB. Active Directory\nC. SFTP\nD. Remote Desktop",
+        "Answer": "D"
+    },
+    113: {
+        "Question": "Which would you expect to see in the transport layer when an email is sent to another post office?\n\nA. The MX record's IP address\nB. A port number of 25\nC. The DNS port number of 53 to locate the post office\nD. The CRC of the frame",
+        "Answer": "B"
+    },
+    114: {
+        "Question": "Which layer would identify if the SYN flag is on or off?\n\nA. Layer 2\nB. Layer 6\nC. Layer 4\nD. Layer 5",
+        "Answer": "C"
+    },
+    115: {
+        "Question": "Which layer would identify if the SYN flag is on or off?",
+        "Answer": "110"
     },
 
     
