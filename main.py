@@ -8,8 +8,7 @@ from discord.ext import commands, tasks
 from discord.ext.commands import has_permissions, CheckFailure, check
 import random
 import time
-
-
+import socket
 from Network_Questions import *
 
 
@@ -83,25 +82,22 @@ async def askme(ctx):
         
             
 
-    
 
 
-@client.command()
-async def ListAll(ctx):
-    if str(ctx.author.id) == "600010784453558331":
-        for x in range(len(Tech_Questions)):
-            time.sleep(2)
-            await ctx.send(f"NUMBER {x}")
-            await ctx.send(Tech_Questions[x]["Question"])
-            await ctx.send(Tech_Questions[x]["Answer"])
-            await ctx.send(".\n\n.")
+
+
+
 
 @client.command()
 async def whoami(ctx):
-    host_name = socket.gethostname()
-    local_ip = socket.gethostbyname(hostname)
-    
-    await ctx.send(f"IP address: {local_ip}\nHost Name: {host_name")
+    if str(ctx.author.id) == "600010784453558331":
+        host_name = socket.gethostname()
+        local_ip = socket.gethostbyname(host_name)
+        
+        await ctx.send(f"IP address: {local_ip[2:]}\nHost Name: {host_name}\nQuestions: {len(Tech_Questions) - 1}")
+    else:
+        print("")
+        
             
             
 @client.command()
