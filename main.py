@@ -112,27 +112,25 @@ async def contributers(ctx):
 async def on_message(message):
 
     if "Yeti" not in str(message.author):
-    
-        #checks for Port number and gives port name
-        for DictRange in range(len(commonPorts)):
         
-            if str(commonPorts[DictRange]["PortNumber"]) in str(message.content).upper():
+        #Checks for the words WHAT and PORT
+        if "WHAT" in str(message.content).upper() and "PORT" in str(message.content).upper():
 
-                #Checks for "what" in sentance (Makes sure its a question)
-                if "WHAT" in str(message.content).upper():
-                    await message.channel.send(commonPorts[DictRange]["PortName"])
+            #checks for Port number and gives port name
+            for DictRange in range(len(commonPorts)):
+            
+                if str(commonPorts[DictRange]["PortNumber"]) in str(message.content).upper():
 
+                    await message.channel.send(f"{commonPorts[DictRange]['PortNameAcronym']}: {commonPorts[DictRange]['PortName']} ")
+            
 
-        #checks for Port name and says port number          
-        for DictRange in range(len(commonPorts)):
-        
-            if str(commonPorts[DictRange]["PortName"]) in str(message.content).upper():
+            for DictRange in range(len(commonPorts)):
+            
+                if str(commonPorts[DictRange]["PortNameAcronym"]) in str(message.content).upper()  or  str(commonPorts[DictRange]["PortName"]) in str(message.content):
 
-                #Checks for "what" in sentance (Makes sure its a question)
-                if "WHAT" in str(message.content).upper():
                     await message.channel.send(f"Port #{commonPorts[DictRange]['PortNumber']} ")
 
-
+    
 
     #makes ?commands work (dont know why, but leave it be)
     await client.process_commands(message)
