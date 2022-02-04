@@ -1,0 +1,16 @@
+{
+    "Users": [
+        {
+            "Username": null,
+            "Nickname": null,
+            "AnswersCorrect": null,
+            "AnswersIncorrect": null
+        },
+        {
+            "Username": "Ducky Boss#5318",
+            "UserID": "600010784453558331",
+            "AnswersCorrect": 0,
+            "AnswerIncorrect": 0
+        }
+    ]
+}

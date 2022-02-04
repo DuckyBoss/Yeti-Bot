@@ -1,8 +1,5 @@
 
-from tkinter.messagebox import QUESTION
-
-
-Tech_Questions = {
+Practice_Questions = {
 
     #--------------------------------------Unit-1---------------------------------------#
     0: {
@@ -502,39 +499,7 @@ Tech_Questions = {
 
 
 #Unfinished, not sure this is the best format to proceed 
-commonPorts = {
-    0: {
-        "PortNumber": 20,
-        "PortDescription": "Port 20: \n\tName: FTP; File Transfer Protocol \n\tPurpose: transfers data between two host machines",
-        "PortName": "FTP"
-    },
-    1: {
-        "PortNumber": 21,
-        "PortDescription": "Port 21 \n\tFTP; File Transfer Protocol \n\tPurpose: establishes a connection between two host machines",
-        "PortName": "FTP"
-    },
-    2: {
-        "PortNumber": 22,
-        "PortDescription": "Port 22 \n\tSSH; Secure Shell \n\tPurpose: A Secure way for remote admnistration access to diffrent computers or Virtual Machines",
-        "PortName": "SSH"
-    },
-    3: {
-        "PortNumber": 25,
-        "PortDescription": "Port 25 \n\tSMTP; Simple Mail Transfer Protocol\n\tPurpose: Used to deliver E-mail messages",
-        "PortName": "SMTP"
-    },
-    4: {
-        "PortNumber": 53,
-        "PortDescription": "Port 53 \n\tDNS; Domain Name Service\n\tPurpose: translates Human-Readable domains to IP addresses",
-        "PortName": "SMTP"
-    },
 
-
-}
-
-
-
-#commonPorts = ["20", "21", "22", "25", "53", "67", "68", "69", "80", "110", "123", "143", "161", "162", "389", "443", "445", "514", "587", "636", "993", "995", "1433", "1521", "3306", "3389", "5060", "5061"]
 
 
 
